@@ -414,6 +414,8 @@ You could use the cave as shelter in case things start to go wrong and you can&#
 [[Return To Space Menu-&gt;Start Mission]]</tw-passagedata><tw-passagedata pid="26" name="Don&#x27;t Be A Coward" tags="uz1" position="815,814">
 So far, so good...
 
+The game is not finished so please look at the other planet which is also not finished
+
 [[Return To Space Menu-&gt;Start Mission]]
 </tw-passagedata><tw-passagedata pid="27" name="This Place Look Cool As Hell" tags="uz2" position="1266,711">&#x27;&#x27;Planet Report:&#x27;&#x27;
 It has a zen atmosphere, the colors are extremely vibrant and the weather seems a bit warm. The sky is a bright yellow as if I&#x27;m inside of a giant lemon. 
@@ -486,7 +488,7 @@ Press [[O-&gt;o1]]
 
 You intimitaded them...
 
-[[Reload Gun]]</tw-passagedata><tw-passagedata pid="37" name="o1" tags="" position="1338,1187">Okay...hiding is cool...I guess...you might die...but whatevs
+[[Reload Gun]]</tw-passagedata><tw-passagedata pid="37" name="o1" tags="" position="1338,1186">Okay...hiding is cool...I guess...you might die...but whatevs
 
 [[Try Again-&gt;You&#x27;re A Few Steps Away, You Got This!]]</tw-passagedata><tw-passagedata pid="38" name="Reload Gun" tags="" position="1188,1337">Press [[X-&gt;x2]]
 Press [[O-&gt;o2]]
@@ -500,21 +502,46 @@ You run for the resource.
 
 [[Skip To The End Of Planet Because I&#x27;m Not Done]]</tw-passagedata><tw-passagedata pid="42" name="Put Them In The Box And Let&#x27;s Get Out Of Here" tags="" position="1112,1713">
 
-</tw-passagedata><tw-passagedata pid="43" name="fail2" tags="" position="1061,1335">[[Try Again-&gt;x1]]</tw-passagedata><tw-passagedata pid="44" name="Untitled Passage 2" tags="" position="1337,1745"></tw-passagedata><tw-passagedata pid="45" name=" Start Mission 1" tags="" position="691,400">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="" tags="" position="1255,271">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Skip To The End Of Planet Because I&#x27;m Not Done" tags="" position="1293,1629">&lt;&lt;set $code = either(&quot;Work, work, work, work, work, &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="43" name="fail2" tags="" position="1061,1335">[[Try Again-&gt;x1]]</tw-passagedata><tw-passagedata pid="44" name="Enter Code" tags="" position="1337,1749">&lt;&lt;if $dial6 == &quot;cell phone&quot; &amp;&amp; $dial7 == &quot;Late night&quot; &amp;&amp; $dial8 == &quot;hotline bling&quot; &amp;&amp; $dial9 == &quot;one thing&quot; &amp;&amp;  $dial10 == &quot;I left the city&quot;&gt;&gt;
+
+&lt;&lt;elseif $dial1 == &quot;work&quot; &amp;&amp; $dial2 == &quot;You see me I be&quot; &amp;&amp; $dial3 == &quot;something about that work&quot; &amp;&amp; $dial4 == &quot;When you a gon’ learn&quot; &amp;&amp;  $dial5 == &quot;tired, tired, tired, tired, tired, tired&quot;&gt;&gt;
+
+Latch Unlocked, Enter Space Craft. 
+[[Finally OMFG]]
+&lt;&lt;else&gt;&gt;
+[[The Aliens Got You, Try Again]]
+
+&lt;&lt;/if&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="45" name=" Start Mission 1" tags="" position="691,400">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="" tags="" position="1255,271">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Skip To The End Of Planet Because I&#x27;m Not Done" tags="" position="1294,1629">&lt;&lt;set $code = either(
+&quot;Work, work, work, work, work, &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
 In order to ge into the spacecraft you have to type in a code.
 &lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work, work, work, work, work, work
 You see me do me dirt, dirt, dirt, dirt, dirt, dirt
 There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt;, work, work, work, work, work
 &lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt;, learn, learn, learn, learn, learn
-Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work, work, work, work, work, work&quot; &quot;learn, learn, learn, learn, learn, learn&quot; &quot;tired, tired, tired, tired, tired, tired&quot; &quot;dirt, dirt, dirt, dirt, dirt, dirt&quot;&gt;&gt;&quot;, &quot;You used to call me on my &lt;&lt;cyclinglink &quot;$dial6&quot; &quot;smartphone&quot; &quot;home phone&quot; &quot;cell phone&quot;&gt;&gt;
+Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work, work, work, work, work, work&quot; &quot;learn, learn, learn, learn, learn, learn&quot; &quot;tired, tired, tired, tired, tired, tired&quot; &quot;dirt, dirt, dirt, dirt, dirt, dirt&quot;&gt;&gt;&quot;, 
+
+&quot;You used to call me on my &lt;&lt;cyclinglink &quot;$dial6&quot; &quot;smartphone&quot; &quot;home phone&quot; &quot;cell phone&quot;&gt;&gt;
 &lt;&lt;cyclinglink &quot;$dial7&quot; &quot;Midnight&quot; &quot;Late night&quot; &quot;In the day&quot; &quot;In the morning&quot;&gt;&gt; when you need my love 
 …
 And I know when that &lt;&lt;cyclinglink &quot;$dial8&quot; &quot;hotmail bling&quot; &quot;hotline bliss&quot; &quot;hotline bling&quot;&gt;&gt;
 That could only mean &lt;&lt;cyclinglink &quot;$dial9&quot; &quot;one thing&quot; &quot;something&quot; &quot;this&quot; &quot;you lied&quot;&gt;&gt;
 …
-Ever since &lt;&lt;cyclinglink &quot;$dial10&quot; &quot;I last saw you&quot; &quot;I left the city, you&quot; &quot;I met you&quot;&gt;&gt;&quot;)&gt;&gt;
+Ever since &lt;&lt;cyclinglink &quot;$dial10&quot; &quot;I last saw you&quot; &quot;I left the city, you&quot; &quot;I met you&quot;&gt;&gt;.&quot;)&gt;&gt;
 
-$code </tw-passagedata></tw-storydata></div>
+Here it is:
+
+$code 
+
+[[Enter Code]]</tw-passagedata><tw-passagedata pid="48" name="Finally OMFG" tags="" position="1337,1895">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="49" name="The Aliens Got You, Try Again" tags="" position="1482,1853">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="Untitled Passage 1" tags="" position="1857,1598">&lt;&lt;set $code = either(
+&quot;&#x27;Work, work, work, work, work, &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
+In order to ge into the spacecraft you have to type in a code.
+&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work, work, work, work, work, work
+You see me do me dirt, dirt, dirt, dirt, dirt, dirt
+There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt;, work, work, work, work, work
+&lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt;, learn, learn, learn, learn, learn
+Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work, work, work, work, work, work&quot; &quot;learn, learn, learn, learn, learn, learn&quot; &quot;tired, tired, tired, tired, tired, tired&quot; &quot;dirt, dirt, dirt, dirt, dirt, dirt&quot;&gt;&gt;&#x27;&quot;)&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS
 
