@@ -98,7 +98,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="It Is Not A Human&#x27;s Sky..." startnode="4" creator="Twine" creator-version="2.1.0" ifid="7FFE01DB-A0D2-4743-9E23-4D5DD656A819" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<div id="store-area" hidden><tw-storydata name="It Is Not A Human&#x27;s Sky..." startnode="47" creator="Twine" creator-version="2.1.0" ifid="7FFE01DB-A0D2-4743-9E23-4D5DD656A819" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 body
 {
   background-color: #9999FF;
@@ -196,8 +196,10 @@ a.uz2
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! <<cyclinglink>> macro for SugarCube 2.x */
 !function(){"use strict";if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2)throw new Error("<<cyclinglink>> macro requires SugarCube 2.0 or greater, aborting load");version.extensions.cyclinglinkMacro={major:3,minor:3,revision:2},macros.cyclinglink={handler:function(a,b,c){function toggleText(w){w.classList.remove("cyclingLinkInit"),w.classList.toggle(rl+"Enabled"),w.classList.toggle(rl+"Disabled"),w.style.display="none"===w.style.display?"inline":"none"}var rl="cyclingLink";switch(c[c.length-1]){case"end":var end=!0;c.pop();break;case"out":var out=!0;c.pop()}var v=null;c.length&&"$"===c[0][0]&&(v=c[0].slice(1),c.shift());var h=State.variables;if(!out||!v||""!==h[v]){var l=insertElement(a,"a");l.className="link-internal cyclingLink",l.setAttribute("data-cycle",0);for(var i=0;i<c.length;i++){var on=i===(v?Math.max(c.indexOf(h[v]),0):0),d=insertElement(null,"span",null,"cyclingLinkInit cyclingLink"+(on?"En":"Dis")+"abled");on?(v&&(h[v]=c[i]),l.setAttribute("data-cycle",i)):d.style.display="none",insertText(d,c[i]),on&&end&&i===c.length-1?l.parentNode.replaceChild(d,l):l.appendChild(d)}jQuery(l).ariaClick(function(){var t=this.childNodes,u=this.getAttribute("data-cycle")-0,m=t.length;if(toggleText(t[u]),u+=1,out&&u===m?v&&(h[v]=""):(u%=m,v&&(h[v]=c[u])),(end||out)&&u===m-(end?1:0)){if(!end)return void this.parentNode.removeChild(this);var n=this.removeChild(t[u]);return n.className=rl+"End",n.style.display="inline",void this.parentNode.replaceChild(n,this)}toggleText(t[u]),this.setAttribute("data-cycle",u)})}}}}();
+
 
 
 
@@ -513,35 +515,35 @@ Latch Unlocked, Enter Space Craft.
 
 &lt;&lt;/if&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="45" name=" Start Mission 1" tags="" position="691,400">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="" tags="" position="1255,271">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Skip To The End Of Planet Because I&#x27;m Not Done" tags="" position="1294,1629">&lt;&lt;set $code = either(
-&quot;Work, work, work, work, work, &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="45" name=" Start Mission 1" tags="" position="691,400">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="" tags="" position="1255,271">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Skip To The End Of Planet Because I&#x27;m Not Done" tags="" position="1294,1632">&lt;&lt;set $code = either(
+&quot;Work work work work work &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
 In order to ge into the spacecraft you have to type in a code.
-&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work, work, work, work, work, work
-You see me do me dirt, dirt, dirt, dirt, dirt, dirt
-There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt;, work, work, work, work, work
-&lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt;, learn, learn, learn, learn, learn
-Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work, work, work, work, work, work&quot; &quot;learn, learn, learn, learn, learn, learn&quot; &quot;tired, tired, tired, tired, tired, tired&quot; &quot;dirt, dirt, dirt, dirt, dirt, dirt&quot;&gt;&gt;&quot;, 
-
-&quot;You used to call me on my &lt;&lt;cyclinglink &quot;$dial6&quot; &quot;smartphone&quot; &quot;home phone&quot; &quot;cell phone&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work work work work work work
+You see me do me dirt dirt dirt dirt dirt dirt
+There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt; work work work work work
+&lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt; learn learn learn learn learn
+Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work work work work work work&quot; &quot;learn learn learn learn learn learn&quot; &quot;tired tired tired tired tired tired&quot; &quot;dirt dirt dirt dirt dirt dirt&quot;&gt;&gt;&quot;, &quot;You used to call me on my &lt;&lt;cyclinglink &quot;$dial6&quot; &quot;smartphone&quot; &quot;home phone&quot; &quot;cell phone&quot;&gt;&gt;
 &lt;&lt;cyclinglink &quot;$dial7&quot; &quot;Midnight&quot; &quot;Late night&quot; &quot;In the day&quot; &quot;In the morning&quot;&gt;&gt; when you need my love 
 …
 And I know when that &lt;&lt;cyclinglink &quot;$dial8&quot; &quot;hotmail bling&quot; &quot;hotline bliss&quot; &quot;hotline bling&quot;&gt;&gt;
 That could only mean &lt;&lt;cyclinglink &quot;$dial9&quot; &quot;one thing&quot; &quot;something&quot; &quot;this&quot; &quot;you lied&quot;&gt;&gt;
 …
-Ever since &lt;&lt;cyclinglink &quot;$dial10&quot; &quot;I last saw you&quot; &quot;I left the city, you&quot; &quot;I met you&quot;&gt;&gt;.&quot;)&gt;&gt;
+Ever since &lt;&lt;cyclinglink &quot;$dial10&quot; &quot;I last saw you&quot; &quot;I left the city you&quot; &quot;I met you&quot;&gt;&gt;&quot;)&gt;&gt;
 
 Here it is:
 
-$code 
+$code
 
-[[Enter Code]]</tw-passagedata><tw-passagedata pid="48" name="Finally OMFG" tags="" position="1337,1895">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="49" name="The Aliens Got You, Try Again" tags="" position="1482,1853">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="Untitled Passage 1" tags="" position="1857,1598">&lt;&lt;set $code = either(
-&quot;&#x27;Work, work, work, work, work, &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
+[[If Code Doesn&#x27;t Work]]</tw-passagedata><tw-passagedata pid="48" name="Finally OMFG" tags="" position="1337,1895">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="49" name="The Aliens Got You, Try Again" tags="" position="1482,1853">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="Untitled Passage 1" tags="" position="1857,1598">&lt;&lt;set $code = either( &quot;apple&quot;, &quot;cherry&quot;, &quot;tomato&quot;)&gt;&gt;
+
+$code</tw-passagedata><tw-passagedata pid="51" name="If Code Doesn&#x27;t Work" tags="" position="1416,1641">Work work work work work &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
 In order to ge into the spacecraft you have to type in a code.
-&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work, work, work, work, work, work
-You see me do me dirt, dirt, dirt, dirt, dirt, dirt
-There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt;, work, work, work, work, work
-&lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt;, learn, learn, learn, learn, learn
-Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work, work, work, work, work, work&quot; &quot;learn, learn, learn, learn, learn, learn&quot; &quot;tired, tired, tired, tired, tired, tired&quot; &quot;dirt, dirt, dirt, dirt, dirt, dirt&quot;&gt;&gt;&#x27;&quot;)&gt;&gt;</tw-passagedata></tw-storydata></div>
+&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work work work work work work
+You see me do me dirt dirt dirt dirt dirt dirt
+There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt; work work work work work
+&lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt; learn learn learn learn learn
+Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work work work work work work&quot; &quot;learn learn learn learn learn learn&quot; &quot;tired tired tired tired tired tired&quot; &quot;dirt dirt dirt dirt dirt dirt&quot;&gt;&gt;
+[[Enter Code]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS
 
