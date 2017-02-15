@@ -197,8 +197,12 @@ a.uz2
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! <<cyclinglink>> macro for SugarCube 2.x */
 !function(){"use strict";if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2)throw new Error("<<cyclinglink>> macro requires SugarCube 2.0 or greater, aborting load");version.extensions.cyclinglinkMacro={major:3,minor:3,revision:2},macros.cyclinglink={handler:function(a,b,c){function toggleText(w){w.classList.remove("cyclingLinkInit"),w.classList.toggle(rl+"Enabled"),w.classList.toggle(rl+"Disabled"),w.style.display="none"===w.style.display?"inline":"none"}var rl="cyclingLink";switch(c[c.length-1]){case"end":var end=!0;c.pop();break;case"out":var out=!0;c.pop()}var v=null;c.length&&"$"===c[0][0]&&(v=c[0].slice(1),c.shift());var h=State.variables;if(!out||!v||""!==h[v]){var l=insertElement(a,"a");l.className="link-internal cyclingLink",l.setAttribute("data-cycle",0);for(var i=0;i<c.length;i++){var on=i===(v?Math.max(c.indexOf(h[v]),0):0),d=insertElement(null,"span",null,"cyclingLinkInit cyclingLink"+(on?"En":"Dis")+"abled");on?(v&&(h[v]=c[i]),l.setAttribute("data-cycle",i)):d.style.display="none",insertText(d,c[i]),on&&end&&i===c.length-1?l.parentNode.replaceChild(d,l):l.appendChild(d)}jQuery(l).ariaClick(function(){var t=this.childNodes,u=this.getAttribute("data-cycle")-0,m=t.length;if(toggleText(t[u]),u+=1,out&&u===m?v&&(h[v]=""):(u%=m,v&&(h[v]=c[u])),(end||out)&&u===m-(end?1:0)){if(!end)return void this.parentNode.removeChild(this);var n=this.removeChild(t[u]);return n.className=rl+"End",n.style.display="inline",void this.parentNode.replaceChild(n,this)}toggleText(t[u]),this.setAttribute("data-cycle",u)})}}}}();
+
+
 
 
 
@@ -433,7 +437,7 @@ Exit the spacecraft and head towards the small crater a few feet away, Be observ
 
 Consider the plateau nearby the crater as safe ground for landing.
 -----
-[[Now Is Not The Time To Be Scared]]</tw-passagedata><tw-passagedata pid="28" name="Untitled Passage" tags="" position="1463,506">You completed your mission, you are now able to come back home. Even though you were placed in stressful situations, you managed to make it back safely. 
+[[Now Is Not The Time To Be Scared]]</tw-passagedata><tw-passagedata pid="28" name="Untitled Passage" tags="" position="1504,2022">You completed your mission, you are now able to come back home. Even though you were placed in stressful situations, you managed to make it back safely. 
 
 We knew you&#x27;d be perfect for this when you found your way around in the desert. 
 
@@ -446,7 +450,7 @@ We knew you&#x27;d be perfect for this when you found your way around in the des
 
 &lt;&lt;cacheaudio &quot;openbox&quot; &quot;http://saniyaga.github.io/TwineGames/openbox.wav&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;openbox2&quot; &quot;http://saniyaga.github.io/TwineGames/openbox2.wav&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="30" name="You Made Momma Very Proud" tags="" position="1464,620">The secret agency is proud of you, you took some time on your journey and you technically returned 10 years later...so you still look hot af. 
+</tw-passagedata><tw-passagedata pid="30" name="You Made Momma Very Proud" tags="" position="1692,1902">The secret agency is proud of you, you took some time on your journey and you technically returned 10 years later...so you still look hot af. 
 
 You recieve your check, you were gifted a brand new apartment, you got a well paying job...
 
@@ -534,9 +538,15 @@ Here it is:
 
 $code
 
-[[If Code Doesn&#x27;t Work]]</tw-passagedata><tw-passagedata pid="48" name="Finally OMFG" tags="" position="1337,1895">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="49" name="The Aliens Got You, Try Again" tags="" position="1482,1853">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="50" name="Untitled Passage 1" tags="" position="1857,1598">&lt;&lt;set $code = either( &quot;apple&quot;, &quot;cherry&quot;, &quot;tomato&quot;)&gt;&gt;
+[[If Code Doesn&#x27;t Work]]
+[[Enter Code]]</tw-passagedata><tw-passagedata pid="48" name="Finally OMFG" tags="" position="1337,1895">You completed your mission, you are now able to come back home. Even though you were placed in stressful situations, you managed to make it back safely. 
 
-$code</tw-passagedata><tw-passagedata pid="51" name="If Code Doesn&#x27;t Work" tags="" position="1416,1641">Work work work work work &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
+We knew you&#x27;d be perfect for this when you found your way around in the desert. 
+
+
+[[You Made Momma Very Proud]]</tw-passagedata><tw-passagedata pid="49" name="The Aliens Got You, Try Again" tags="" position="1482,1853">[[Return-&gt;If Code Doesn&#x27;t Work]]</tw-passagedata><tw-passagedata pid="50" name="Untitled Passage 1" tags="" position="1857,1598">&lt;&lt;set $code = either( &quot;apple&quot;, &quot;cherry&quot;, &quot;tomato&quot;)&gt;&gt;
+
+$code</tw-passagedata><tw-passagedata pid="51" name="If Code Doesn&#x27;t Work" tags="" position="1413,1631">Work work work work work &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
 In order to ge into the spacecraft you have to type in a code.
 &lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work work work work work work
 You see me do me dirt dirt dirt dirt dirt dirt
