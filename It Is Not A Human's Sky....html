@@ -98,7 +98,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="It Is Not A Human&#x27;s Sky..." startnode="47" creator="Twine" creator-version="2.1.0" ifid="7FFE01DB-A0D2-4743-9E23-4D5DD656A819" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+	<div id="store-area" hidden><tw-storydata name="It Is Not A Human&#x27;s Sky..." startnode="4" creator="Twine" creator-version="2.1.0" ifid="7FFE01DB-A0D2-4743-9E23-4D5DD656A819" format="SugarCube" format-version="2.12.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 body
 {
   background-color: #9999FF;
@@ -199,8 +199,16 @@ a.uz2
 
 
 
+
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! <<cyclinglink>> macro for SugarCube 2.x */
 !function(){"use strict";if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2)throw new Error("<<cyclinglink>> macro requires SugarCube 2.0 or greater, aborting load");version.extensions.cyclinglinkMacro={major:3,minor:3,revision:2},macros.cyclinglink={handler:function(a,b,c){function toggleText(w){w.classList.remove("cyclingLinkInit"),w.classList.toggle(rl+"Enabled"),w.classList.toggle(rl+"Disabled"),w.style.display="none"===w.style.display?"inline":"none"}var rl="cyclingLink";switch(c[c.length-1]){case"end":var end=!0;c.pop();break;case"out":var out=!0;c.pop()}var v=null;c.length&&"$"===c[0][0]&&(v=c[0].slice(1),c.shift());var h=State.variables;if(!out||!v||""!==h[v]){var l=insertElement(a,"a");l.className="link-internal cyclingLink",l.setAttribute("data-cycle",0);for(var i=0;i<c.length;i++){var on=i===(v?Math.max(c.indexOf(h[v]),0):0),d=insertElement(null,"span",null,"cyclingLinkInit cyclingLink"+(on?"En":"Dis")+"abled");on?(v&&(h[v]=c[i]),l.setAttribute("data-cycle",i)):d.style.display="none",insertText(d,c[i]),on&&end&&i===c.length-1?l.parentNode.replaceChild(d,l):l.appendChild(d)}jQuery(l).ariaClick(function(){var t=this.childNodes,u=this.getAttribute("data-cycle")-0,m=t.length;if(toggleText(t[u]),u+=1,out&&u===m?v&&(h[v]=""):(u%=m,v&&(h[v]=c[u])),(end||out)&&u===m-(end?1:0)){if(!end)return void this.parentNode.removeChild(this);var n=this.removeChild(t[u]);return n.className=rl+"End",n.style.display="inline",void this.parentNode.replaceChild(n,this)}toggleText(t[u]),this.setAttribute("data-cycle",u)})}}}}();
+
+
+
+
 
 
 
@@ -341,22 +349,26 @@ Now you&#x27;re passed out.
 We need your pop culture, astrophysics, and aircraft piloting expertise to help us communicate with aliens. 
 
 [[Hell Yeah!!!]] 
-</tw-passagedata><tw-passagedata pid="18" name="Hell Yeah!!!" tags="" position="691,140">@@font-size:80px;After A Year Of Training@@
+</tw-passagedata><tw-passagedata pid="18" name="Hell Yeah!!!" tags="" position="690,140">@@font-size:80px;After A Year Of Training@@
 
 &lt;&lt;timed 4s&gt;&gt;&lt;&lt;goto &quot;Mission&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Mission" tags="" position="691,250">&#x27;&#x27;Mission:&#x27;&#x27;
 Visit various planets, you must visit all of them but in whichever order
+Collect assigned resources
 
 &#x27;&#x27;Weapons:&#x27;&#x27;
 Given based on the planet you explore
 
 &#x27;&#x27;Note:&#x27;&#x27;
-Thankfully, we have the location of the resources. 
-The resources may or may not be harmful. 
-We don’t know who or what you will encounter, so be careful.
+Thankfully, we have the location of the resources 
+The resources may or may not be harmful
+We don’t know who or what you will encounter, so be careful
 We care about you bruh
 [[Start Mission-&gt;Start Mission]]
-</tw-passagedata><tw-passagedata pid="20" name="Start Mission" tags="startmission" position="920,369">Choose a location on the map that you would like to explore, and pleeeease remember where you went. Thanks...
-
+</tw-passagedata><tw-passagedata pid="20" name="Start Mission" tags="startmission" position="920,370">&lt;&lt;if $hasResource1 &amp;&amp; $hasResource2&gt;&gt;\
+&#x27;&#x27;[[Mission Complete: Return Home]]&#x27;&#x27;
+&lt;&lt;else&gt;&gt;\
+Choose a location on the map that you would like to explore, and pleeeease remember where you went. Thanks...\
+&lt;&lt;/if&gt;&gt;
 &lt;img src=&quot;https://saniyaga.github.io/TwineGames/spacemap%20(2).jpg &quot; usemap=&quot;#image-map&quot;&gt;
 
 &lt;map name=&quot;image-map&quot;&gt;
@@ -401,29 +413,34 @@ We care about you bruh
 [[Return To Space Menu-&gt;Start Mission]]</tw-passagedata><tw-passagedata pid="25" name="Ooooo Looks Like A Pretty Place" tags="uz1" position="814,709">Ahhhh, &lt;&lt;print $planet1&gt;&gt;, a perfect name! 
 
 &#x27;&#x27;Planet Report:&#x27;&#x27;
-It has a very active atmosphere, the colors are pastel-like and the weather seems a bit cool. The clouds are moving fast in the sky green-ish sky. 
+It has a very active atmosphere, the colors are pastel-like and the weather seems a bit cool. The clouds are moving fast in the green-ish sky. 
 
 &#x27;&#x27;Weapons:&#x27;&#x27;
-lazer beam auto rifle...aaand the lazers pink &lt;3 
+lazer beam auto rifle...aaand the lazers are pink &lt;3 
 a glowing 1000 degree knife
 
 &#x27;&#x27;Task:&#x27;&#x27;
 Bring back metallic resources you may find, they may be difficult to find. 
 
-Exist the spacecraft and head towards a cave a few meters away. On your short walk, you&#x27;ll get an idea of what the place is like. 
+Exit the spacecraft and head towards a cave a few meters away. On your short walk, you&#x27;ll get an idea of what the place is like. 
 
 You could use the cave as shelter in case things start to go wrong and you can&#x27;t make it back to your spaceraft. 
 -----
 [[Don&#x27;t Be A Coward]]
 
 
-[[Return To Space Menu-&gt;Start Mission]]</tw-passagedata><tw-passagedata pid="26" name="Don&#x27;t Be A Coward" tags="uz1" position="815,814">
-So far, so good...
-
-The game is not finished so please look at the other planet which is also not finished
-
-[[Return To Space Menu-&gt;Start Mission]]
-</tw-passagedata><tw-passagedata pid="27" name="This Place Look Cool As Hell" tags="uz2" position="1266,711">&#x27;&#x27;Planet Report:&#x27;&#x27;
+[[Return To Space Menu-&gt;Start Mission]]</tw-passagedata><tw-passagedata pid="26" name="Don&#x27;t Be A Coward" tags="uz1" position="815,814">&lt;&lt;timed 1.5s&gt;&gt;\
+Pick up flower
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 2.5s&gt;&gt;\
+Pick up flower
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 3.5s&gt;&gt;\
+This is ones different looking, you pick it up anyway
+&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 4.5s&gt;&gt;\
+[[That Was Not A Flower!]]
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="This Place Look Cool As Hell" tags="uz2" position="1267,714">&#x27;&#x27;Planet Report:&#x27;&#x27;
 It has a zen atmosphere, the colors are extremely vibrant and the weather seems a bit warm. The sky is a bright yellow as if I&#x27;m inside of a giant lemon. 
 
 &#x27;&#x27;Weapons:&#x27;&#x27;
@@ -433,34 +450,17 @@ a machete
 &#x27;&#x27;Task:&#x27;&#x27;
 Bring back small plant resources.
 
-Exit the spacecraft and head towards the small crater a few feet away, Be observant of your surroundings, when the crater you will seem vulnerable to any predators. 
+Exit the spacecraft and head towards the small crater a few feet away, Be observant of your surroundings, when in the crater you will seem vulnerable to any predators. 
 
 Consider the plateau nearby the crater as safe ground for landing.
 -----
-[[Now Is Not The Time To Be Scared]]</tw-passagedata><tw-passagedata pid="28" name="Untitled Passage" tags="" position="1504,2022">You completed your mission, you are now able to come back home. Even though you were placed in stressful situations, you managed to make it back safely. 
-
-We knew you&#x27;d be perfect for this when you found your way around in the desert. 
-
-
-[[You Made Momma Very Proud]]</tw-passagedata><tw-passagedata pid="29" name="StoryInit" tags="" position="0,39">&lt;&lt;cacheaudio &quot;spacetravel&quot; &quot;http://saniyaga.github.io/TwineGames/travelingthroughspace.wav&quot;&gt;&gt;
+[[Now Is Not The Time To Be Scared]]</tw-passagedata><tw-passagedata pid="28" name="StoryInit" tags="" position="0,39">&lt;&lt;cacheaudio &quot;spacetravel&quot; &quot;http://saniyaga.github.io/TwineGames/travelingthroughspace.wav&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;beam&quot; &quot;http://saniyaga.github.io/TwineGames/beam.wav&quot;&gt;&gt;
 
 &lt;&lt;cacheaudio &quot;beam2&quot; &quot;http://saniyaga.github.io/TwineGames/beam2.wav&quot;&gt;&gt;
 
-&lt;&lt;cacheaudio &quot;openbox&quot; &quot;http://saniyaga.github.io/TwineGames/openbox.wav&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;openbox2&quot; &quot;http://saniyaga.github.io/TwineGames/openbox2.wav&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="30" name="You Made Momma Very Proud" tags="" position="1692,1902">The secret agency is proud of you, you took some time on your journey and you technically returned 10 years later...so you still look hot af. 
-
-You recieve your check, you were gifted a brand new apartment, you got a well paying job...
-
-You think about &lt;&lt;print &quot;$name&quot;&gt;&gt;, you realize that they didn&#x27;t appreciate who you were and this adventure made that clear. 
-
-But atleast you are happy now :)
-
-
-@@font-size:100px;The End...@@
-</tw-passagedata><tw-passagedata pid="31" name="Now Is Not The Time To Be Scared" tags="uz2" position="1267,821">&lt;&lt;timed 1s&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="29" name="Now Is Not The Time To Be Scared" tags="uz2" position="1267,821">&lt;&lt;timed 1s&gt;&gt;\
 You walk
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 2s&gt;&gt;\
@@ -469,91 +469,179 @@ and walk
 &lt;&lt;timed 3s&gt;&gt;\
 and walk
 &lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 5s&gt;&gt;\
+&lt;&lt;timed 4s&gt;&gt;\
 You forgot to eat breakfast, you&#x27;re so hungryyyy and tiredddd 
 &lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 6s&gt;&gt;\
 [[You&#x27;re A Few Steps Away, You Got This!]]
 &lt;&lt;/timed&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="32" name="extra" tags="" position="1447,778">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="33" name="You&#x27;re A Few Steps Away, You Got This!" tags="" position="1265,927">As you are nearing the resource destination, you see a couple human-like creatures surrounding the resource. They are observant and they seem well equipped. 
+</tw-passagedata><tw-passagedata pid="30" name="You&#x27;re A Few Steps Away, You Got This!" tags="uz2" position="1266,928">As you are nearing the resource destination, you see a couple human-like alien creatures surrounding the resource. They are observant and they seem well equipped. 
 
 Your stomach growls...
 
-They turn around, grab the box and start shooting...
+They turn around, grab the resource and start shooting...
 
 [[Your Only Option Is To Fight]]
-</tw-passagedata><tw-passagedata pid="34" name="fail 1" tags="" position="1148,1037">This is your brain right now: 
-&lt;img src=&quot;&quot;&gt;
+</tw-passagedata><tw-passagedata pid="31" name="fail 1" tags="uz2" position="1148,1037">YOU CAN&#x27;T LET THE ALIENS WIN!!
 
-[[Focus-&gt;You&#x27;re A Few Steps Away, You Got This!]]</tw-passagedata><tw-passagedata pid="35" name="Your Only Option Is To Fight" tags="" position="1263,1038">Press [[X-&gt;x1]]
-
+[[Focus-&gt;You&#x27;re A Few Steps Away, You Got This!]]</tw-passagedata><tw-passagedata pid="32" name="Your Only Option Is To Fight" tags="uz2" position="1260,1053">Press [[X-&gt;x1]]
 Press [[O-&gt;o1]]
 
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;fail 1&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="x1" tags="" position="1188,1187">Nice Shot!
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;fail 1&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="x1" tags="uz2" position="1188,1187">Nice Shot!
 
 You intimitaded them...
 
-[[Reload Gun]]</tw-passagedata><tw-passagedata pid="37" name="o1" tags="" position="1338,1186">Okay...hiding is cool...I guess...you might die...but whatevs
+[[Reload Gun]]</tw-passagedata><tw-passagedata pid="34" name="o1" tags="uz2" position="1338,1187">Okay...hiding is cool...I guess...you might die...but whatevs
 
-[[Try Again-&gt;You&#x27;re A Few Steps Away, You Got This!]]</tw-passagedata><tw-passagedata pid="38" name="Reload Gun" tags="" position="1188,1337">Press [[X-&gt;x2]]
+[[Try Again-&gt;You&#x27;re A Few Steps Away, You Got This!]]</tw-passagedata><tw-passagedata pid="35" name="Reload Gun" tags="uz2" position="1189,1337">Press [[X-&gt;x2]]
 Press [[O-&gt;o2]]
-&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;fail 2&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="x2" tags="" position="1113,1488">Press [[X-&gt;x3]]
-</tw-passagedata><tw-passagedata pid="40" name="o2" tags="" position="1263,1487">And you hide again for some reason. 
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;fail 2&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;audio &quot;beam2&quot; play volume 1&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="x2" tags="uz2" position="1113,1490">Press [[X-&gt;x3]]
+
+&lt;&lt;audio &quot;beam2&quot; play volume 1&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="o2" tags="uz2" position="1263,1487">And you hide again for some reason. 
 
 [[Try Again-&gt;x1]]
-</tw-passagedata><tw-passagedata pid="41" name="x3" tags="" position="1113,1600">2 down, the others ran away. 
+</tw-passagedata><tw-passagedata pid="38" name="x3" tags="uz2" position="1113,1600">2 down, the others ran away. 
 
 You run for the resource. 
 
-[[Skip To The End Of Planet Because I&#x27;m Not Done]]</tw-passagedata><tw-passagedata pid="42" name="Put Them In The Box And Let&#x27;s Get Out Of Here" tags="" position="1112,1713">
+[[Run Like You Did In The Beginning Of The Game!]]</tw-passagedata><tw-passagedata pid="39" name="fail2" tags="uz2" position="1061,1336">*Face Palm* *Sigh*
 
-</tw-passagedata><tw-passagedata pid="43" name="fail2" tags="" position="1061,1335">[[Try Again-&gt;x1]]</tw-passagedata><tw-passagedata pid="44" name="Enter Code" tags="" position="1337,1749">&lt;&lt;if $dial6 == &quot;cell phone&quot; &amp;&amp; $dial7 == &quot;Late night&quot; &amp;&amp; $dial8 == &quot;hotline bling&quot; &amp;&amp; $dial9 == &quot;one thing&quot; &amp;&amp;  $dial10 == &quot;I left the city&quot;&gt;&gt;
+[[Try Again-&gt;x1]]</tw-passagedata><tw-passagedata pid="40" name="That Was Not A Flower!" tags="uz1" position="819,941">You pulled on a snake-like creature’s tail. 
+It hisses at you
 
-&lt;&lt;elseif $dial1 == &quot;work&quot; &amp;&amp; $dial2 == &quot;You see me I be&quot; &amp;&amp; $dial3 == &quot;something about that work&quot; &amp;&amp; $dial4 == &quot;When you a gon’ learn&quot; &amp;&amp;  $dial5 == &quot;tired, tired, tired, tired, tired, tired&quot;&gt;&gt;
+[[Run For Your Life]]
+[[Attack With Your Glowing 1000 Degree]]
+</tw-passagedata><tw-passagedata pid="41" name="Run For Your Life" tags="uz1" position="740,1114">Outrunning a slithering snake might be plausible, but this snakes got WINGS
 
-Latch Unlocked, Enter Space Craft. 
-[[Finally OMFG]]
-&lt;&lt;else&gt;&gt;
-[[The Aliens Got You, Try Again]]
+the miracles of RedBull
 
-&lt;&lt;/if&gt;&gt;
+[[Turn Around And Attack With Your Knife-&gt;Attack With Your Glowing 1000 Degree]]</tw-passagedata><tw-passagedata pid="42" name="Attack With Your Glowing 1000 Degree" tags="uz1" position="890,1114">&#x27;&#x27;For Science!&#x27;&#x27; you shout as you [[slash]] it with your knife.</tw-passagedata><tw-passagedata pid="43" name="slash" tags="uz1" position="890,1264">You are closer to the cave. If the cave is shelter for you it might be for other creatures too. This may also be a hunting ground for predators…waiting for prey to come out. 
 
-</tw-passagedata><tw-passagedata pid="45" name=" Start Mission 1" tags="" position="691,400">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="46" name="" tags="" position="1255,271">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="47" name="Skip To The End Of Planet Because I&#x27;m Not Done" tags="" position="1294,1632">&lt;&lt;set $code = either(
-&quot;Work work work work work &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
-In order to ge into the spacecraft you have to type in a code.
-&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work work work work work work
-You see me do me dirt dirt dirt dirt dirt dirt
-There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt; work work work work work
-&lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt; learn learn learn learn learn
-Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work work work work work work&quot; &quot;learn learn learn learn learn learn&quot; &quot;tired tired tired tired tired tired&quot; &quot;dirt dirt dirt dirt dirt dirt&quot;&gt;&gt;&quot;, &quot;You used to call me on my &lt;&lt;cyclinglink &quot;$dial6&quot; &quot;smartphone&quot; &quot;home phone&quot; &quot;cell phone&quot;&gt;&gt;
+[[Maybe You Should Hurry Up A Little]]
+</tw-passagedata><tw-passagedata pid="44" name="Maybe You Should Hurry Up A Little" tags="uz1" position="890,1414">Easy peasy, the cave is right there. 
+
+But you get this weird chill up your spine, like that feeling when you get when you think are being watched. 
+
+[[Enter The Cave]]
+</tw-passagedata><tw-passagedata pid="45" name="Enter The Cave" tags="uz1" position="890,1569">It feels like an EDM rave in here with all the neon, weird objects and all...except instead of people there are a bunch of plants. 
+
+You say, “boot and cats” repeatedly
+
+You remember your dream of being a DJ...if you can&#x27;t be one back home you can be a DJ here 
+
+[[Saddest Part Of The Story So Far :’(]]
+</tw-passagedata><tw-passagedata pid="46" name="Saddest Part Of The Story So Far :’(" tags="uz1" position="890,1714">Quickly you realize when you start beatboxing the creatures start to run away...
+
+when you stop they come back
+
+its literally so awful that it&#x27;s repelling them, great discovery!
+
+[[Pick Up The Resources And Lets Goooo]]
+</tw-passagedata><tw-passagedata pid="47" name="Pick Up The Resources And Lets Goooo" tags="uz1" position="890,1865">Half way back to your spacecraft
+
+You hear footsteps that aren’t yours. You turn around…
+
+It’s a four legged creature that looks like a large hyena with scales 
+
+like a snake, and a tail all fluffy.
+
+It sensed you as a threat, its making a very &#x27;hangry&#x27; face 
+[[Start Shooting]]
+</tw-passagedata><tw-passagedata pid="48" name="Start Shooting" tags="uz1" position="890,2018">Press [[X-&gt;scales]]
+Press [[O-&gt;hide]]
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;TryAgain1&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="scales" tags="uz1" position="815,2165">The scales are protecting it!
+
+Press [[X-&gt;shooting]]</tw-passagedata><tw-passagedata pid="50" name="hide" tags="uz1" position="965,2166">You hid.
+
+Now shoot [[X-&gt;scales]]
+
+&lt;&lt;audio &quot;beam&quot; play volume 1&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="shooting" tags="uz1" position="819,2295">Press [[X-&gt;shootingagain]]
+
+&lt;&lt;audio &quot;beam&quot; play volume 1&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="shootingagain" tags="uz1" position="821,2429">Press [[X-&gt;shooting3]]
+
+&lt;&lt;audio &quot;beam&quot; play volume 1&gt;&gt;</tw-passagedata><tw-passagedata pid="53" name="shooting3" tags="uz1" position="819,2579">@@font-size:60px;ITS NOT SHOOTING!!@@
+
+Press [[X-&gt;shooting4]]
+
+&lt;&lt;audio &quot;beam&quot; play volume 1&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="shooting4" tags="uz1" position="818,2729">You ran out of bullets, damn it. 
+
+Press [[L1]]
+Press [[L2]]</tw-passagedata><tw-passagedata pid="55" name="L1" tags="uz1" position="743,2879">You threw your knife, you no longer have a knife
+You hurt the creature, but it’s not giving up…
+
+Press [[L2]]</tw-passagedata><tw-passagedata pid="56" name="L2" tags="uz1" position="893,2879">You start beatboxing from the top of your lungs.
+Its working, it&#x27;s walking away.
+but for how long? 
+
+You run for the spacecraft while continually yelling
+
+[[Unlock The Spacecraft Latch]]
+</tw-passagedata><tw-passagedata pid="57" name="Unlock The Spacecraft Latch" tags="uz1" position="891,3029">Your throat is drying out, enter code ASAP: 
+
+You used to call me on my &lt;&lt;cyclinglink &quot;$dial6&quot; &quot;smartphone&quot; &quot;home phone&quot; &quot;cell phone&quot;&gt;&gt;
 &lt;&lt;cyclinglink &quot;$dial7&quot; &quot;Midnight&quot; &quot;Late night&quot; &quot;In the day&quot; &quot;In the morning&quot;&gt;&gt; when you need my love 
 …
 And I know when that &lt;&lt;cyclinglink &quot;$dial8&quot; &quot;hotmail bling&quot; &quot;hotline bliss&quot; &quot;hotline bling&quot;&gt;&gt;
 That could only mean &lt;&lt;cyclinglink &quot;$dial9&quot; &quot;one thing&quot; &quot;something&quot; &quot;this&quot; &quot;you lied&quot;&gt;&gt;
 …
-Ever since &lt;&lt;cyclinglink &quot;$dial10&quot; &quot;I last saw you&quot; &quot;I left the city you&quot; &quot;I met you&quot;&gt;&gt;&quot;)&gt;&gt;
+Ever since &lt;&lt;cyclinglink &quot;$dial10&quot; &quot;I last saw you&quot; &quot;I left the city you&quot; &quot;I met you&quot;&gt;&gt;
 
-Here it is:
+&lt;&lt;timed 50s&gt;&gt;&lt;&lt;goto &quot;codefail1&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+[[Enter Code-&gt;Enter Code 1]]</tw-passagedata><tw-passagedata pid="58" name="Enter Code 1" tags="uz1" position="893,3182">&lt;&lt;if $dial6 == &quot;cell phone&quot; &amp;&amp; $dial7 == &quot;Late night&quot; &amp;&amp; $dial8 == &quot;hotline bling&quot; &amp;&amp; $dial9 == &quot;one thing&quot; &amp;&amp;  $dial10 == &quot;I left the city you&quot;&gt;&gt;
 
-$code
+[[Bye Felicia]]
 
-[[If Code Doesn&#x27;t Work]]
-[[Enter Code]]</tw-passagedata><tw-passagedata pid="48" name="Finally OMFG" tags="" position="1337,1895">You completed your mission, you are now able to come back home. Even though you were placed in stressful situations, you managed to make it back safely. 
+&lt;&lt;else&gt;&gt;
+[[Its Too Gory To Describe..Try Again-&gt;Unlock The Spacecraft Latch]]
 
-We knew you&#x27;d be perfect for this when you found your way around in the desert. 
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;set $hasResource1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="Bye Felicia" tags="uz1" position="893,3310">[[Head To Orbit-&gt;Start Mission]]</tw-passagedata><tw-passagedata pid="60" name="codefail1" tags="uz1" position="1075,3031">Not a good ending to a story. 
+[[Try Again-&gt;Unlock The Spacecraft Latch]]</tw-passagedata><tw-passagedata pid="61" name="Mission Complete: Return Home" tags="" position="1086,352">The secret agency is proud of you, you took some time on your journey and you technically returned 10 years later...so you still look hot af. 
+
+You recieve your check, you were gifted a brand new apartment, you got a well paying job, you can pursue your DJ career again...
+
+You think about &lt;&lt;print &quot;$name&quot;&gt;&gt;, you realize that they didn&#x27;t appreciate who you were and this adventure made that clear. 
+
+But atleast you are happy now :)
 
 
-[[You Made Momma Very Proud]]</tw-passagedata><tw-passagedata pid="49" name="The Aliens Got You, Try Again" tags="" position="1482,1853">[[Return-&gt;If Code Doesn&#x27;t Work]]</tw-passagedata><tw-passagedata pid="50" name="Untitled Passage 1" tags="" position="1857,1598">&lt;&lt;set $code = either( &quot;apple&quot;, &quot;cherry&quot;, &quot;tomato&quot;)&gt;&gt;
+@@font-size:100px;The End...@@
 
-$code</tw-passagedata><tw-passagedata pid="51" name="If Code Doesn&#x27;t Work" tags="" position="1413,1631">Work work work work work &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
-In order to ge into the spacecraft you have to type in a code.
-&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the &quot; &quot;coldest&quot;&gt;&gt; work work work work work work
+Thank You For Playing!</tw-passagedata><tw-passagedata pid="62" name="TryAgain1" tags="uz1" position="1014,2009">[[One More Time, C&#x27;mon-&gt;Pick Up The Resources And Lets Goooo]]</tw-passagedata><tw-passagedata pid="63" name="Run Like You Did In The Beginning Of The Game!" tags="uz2" position="1119,1718">Its peaceful again. Absorbing all the vibrance that surrounds you. 
+
+But its a videogame and things are not meant to go right.
+
+[[What Now????]]</tw-passagedata><tw-passagedata pid="64" name="What Now????" tags="uz2" position="1119,1868">The aliens called for reinforcements, [[RUN!]]
+
+</tw-passagedata><tw-passagedata pid="65" name="RUN!" tags="uz2" position="1119,2019">You reached your spacecraft, 
+
+but theres a code to get in...who thought that was a good idea?
+
+[[Enter Code-&gt;entercode]]</tw-passagedata><tw-passagedata pid="66" name="entercode" tags="uz2" position="1124,2147">They are catcing up...HURRY!
+
+Work work work work work &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;sleep&quot; &quot;cry&quot; &quot;work&quot;&gt;&gt;
+&lt;&lt;cyclinglink &quot;$dial2&quot; &quot;I see you doing&quot; &quot;You see me I be&quot; &quot;You like doing the&quot;&gt;&gt; work work work work work work
 You see me do me dirt dirt dirt dirt dirt dirt
-There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something about that work&quot;&gt;&gt; work work work work work
+There’s &lt;&lt;cyclinglink &quot;$dial3&quot; &quot;nothing ‘bout that work&quot; &quot;something about this work&quot; &quot;might me something ‘bout that work&quot; &quot;something &#x27;bout that work&quot;&gt;&gt; work work work work work
 &lt;&lt;cyclinglink &quot;$dial4&quot; &quot;When you a gon’ learn&quot; &quot;Will you ever learn&quot; &quot;When am I gon’ learn&quot; &quot;You better learn&quot;&gt;&gt; learn learn learn learn learn
 Me na care if me &lt;&lt;cyclinglink &quot;$dial5&quot; &quot;work work work work work work&quot; &quot;learn learn learn learn learn learn&quot; &quot;tired tired tired tired tired tired&quot; &quot;dirt dirt dirt dirt dirt dirt&quot;&gt;&gt;
-[[Enter Code]]</tw-passagedata></tw-storydata></div>
+
+[[Enter Code-&gt;forreal]]
+
+&lt;&lt;timed 100s&gt;&gt;&lt;&lt;goto &quot;codefail2&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="forreal" tags="uz2" position="1122,2295">&lt;&lt;if $dial1 == &quot;work&quot; &amp;&amp; $dial2 == &quot;You see me I be&quot; &amp;&amp; $dial3 == &quot;something &#x27;bout that work&quot; &amp;&amp; $dial4 == &quot;When you a gon’ learn&quot; &amp;&amp;  $dial5 == &quot;tired tired tired tired tired tired&quot;&gt;&gt;
+
+Latch Unlocked, Enter Space Craft. 
+[[Finally OMFG]]
+&lt;&lt;else&gt;&gt;
+[[The Aliens Got You, Try Again-&gt;entercode]]
+
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $hasResource2 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Finally OMFG" tags="uz2" position="1123,2448">[[Head To Orbit-&gt;Start Mission]]</tw-passagedata><tw-passagedata pid="69" name="codefail2" tags="uz2" position="1263,2233">[[This Song Is A Classic Dude-&gt;entercode]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS
 
