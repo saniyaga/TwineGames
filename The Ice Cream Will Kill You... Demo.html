@@ -1,0 +1,193 @@
+<tw-storydata name="The Ice Cream Will Kill You... Demo" startnode="1" creator="Twine" creator-version="2.1.3" ifid="BB6EB891-EEA1-40F3-BDC2-78E144E0BBF6" format="SugarCube" format-version="2.18.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">#ui-bar 
+{
+display: none; 
+}
+#story {
+	margin: 40px;
+}
+body
+{
+  background-color: #ffffff;
+	color: #FF6E66;
+}
+a
+{
+  color: #95cdd6;
+}
+h1 
+{
+  font-family: Courier new;
+  font-size: 30px;
+}
+body, tw-story
+{
+  font-family: Courier New;
+  font-size: 25px;
+}
+a:hover { 
+	color: #ffcd87;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">/*! <<cyclinglink>> macro for SugarCube 2.x */
+!function(){"use strict";if("undefined"==typeof version||"undefined"==typeof version.title||"SugarCube"!==version.title||"undefined"==typeof version.major||version.major<2)throw new Error("<<cyclinglink>> macro requires SugarCube 2.0 or greater, aborting load");version.extensions.cyclinglinkMacro={major:3,minor:3,revision:2},macros.cyclinglink={handler:function(a,b,c){function toggleText(w){w.classList.remove("cyclingLinkInit"),w.classList.toggle(rl+"Enabled"),w.classList.toggle(rl+"Disabled"),w.style.display="none"===w.style.display?"inline":"none"}var rl="cyclingLink";switch(c[c.length-1]){case"end":var end=!0;c.pop();break;case"out":var out=!0;c.pop()}var v=null;c.length&&"$"===c[0][0]&&(v=c[0].slice(1),c.shift());var h=State.variables;if(!out||!v||""!==h[v]){var l=insertElement(a,"a");l.className="link-internal cyclingLink",l.setAttribute("data-cycle",0);for(var i=0;i<c.length;i++){var on=i===(v?Math.max(c.indexOf(h[v]),0):0),d=insertElement(null,"span",null,"cyclingLinkInit cyclingLink"+(on?"En":"Dis")+"abled");on?(v&&(h[v]=c[i]),l.setAttribute("data-cycle",i)):d.style.display="none",insertText(d,c[i]),on&&end&&i===c.length-1?l.parentNode.replaceChild(d,l):l.appendChild(d)}jQuery(l).ariaClick(function(){var t=this.childNodes,u=this.getAttribute("data-cycle")-0,m=t.length;if(toggleText(t[u]),u+=1,out&&u===m?v&&(h[v]=""):(u%=m,v&&(h[v]=c[u])),(end||out)&&u===m-(end?1:0)){if(!end)return void this.parentNode.removeChild(this);var n=this.removeChild(t[u]);return n.className=rl+"End",n.style.display="inline",void this.parentNode.replaceChild(n,this)}toggleText(t[u]),this.setAttribute("data-cycle",u)})}}}}();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script><tw-passagedata pid="1" name="Intro" tags="" position="159,99">@@font-size:100px;//DEMO//@@
+
+&lt;img src=&quot;https://saniyaga.github.io/TwineGames/Ice%20Cream%20gif%20I%20made.gif&quot; 
+width=&quot;700&quot; height=&quot;450&quot;&gt;
+
+
+[[Or Maybe It Won&#x27;t...]]
+
+@@font-size:20px;//Please put sound on and make this fullscreen//@@
+
+
+By: Saniya Ahmed
+</tw-passagedata><tw-passagedata pid="2" name="Or Maybe It Won&#x27;t..." tags="" position="158,209">You and your friends head to that cute sweet shop at the corner of the street.
+
+@@font-size:20px;//click on the door//@@
+
+&lt;img src=&quot;https://saniyaga.github.io/TwineGames/asweetshopenterance.png&quot; usemap=&quot;#image-map&quot;&gt;
+
+&lt;map name=&quot;image-map&quot;&gt;
+    &lt;area 
+	data-passage=&quot;Enter Sweet Shop&quot;
+	alt=&quot;enter sweet shop&quot; 
+	title=&quot;enter sweet shop&quot; 
+	coords=&quot;326,152,477,426&quot; 
+	shape=&quot;rect&quot;&gt;
+&lt;/map&gt;</tw-passagedata><tw-passagedata pid="3" name="OMG again" tags="" position="425,214">@@font-size:100px;//It&#x27;s a TRAP!//@@
+
+
+
+&lt;&lt;timed 1.25s&gt;&gt;&lt;&lt;goto &quot;trap&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+
+&lt;&lt;audio &quot;Icecreamtruck&quot; stop&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Leaving" tags="" position="425,336">The sun is warm and the wind is cool, its perfect....but you hear music in the distance getting close....
+
+
+&lt;&lt;audio &quot;Icecreamtruck&quot; play volume 0.10 fadeto 0.50&gt;&gt;
+
+[[Could This Day Get Any Worse????-&gt;OMG again]] 
+</tw-passagedata><tw-passagedata pid="5" name="OMG" tags="" position="431,450">
+The line is too long, its gonna take forever, screw it...
+
+[[Make The Wise Choice And Leave-&gt;Leaving]]
+</tw-passagedata><tw-passagedata pid="6" name="Chosen" tags="" position="296,326">You got your treat. 
+
+
+You and your friends decide to head to a park down the street.
+
+[[Exit-&gt;Proceed]]
+</tw-passagedata><tw-passagedata pid="7" name="Enter Sweet Shop" tags="" position="161,324">The sweet smell of sugary goodness fills your nose. Your eyes are nearly filled with tears of joy...There are sooooo many things you could get!! 
+
+
+[[Pick Something To Eat Alreadyyy]]</tw-passagedata><tw-passagedata pid="8" name="Pick Something To Eat Alreadyyy" tags="" position="166,444">You&#x27;re in the mood for:
+Doughnuts
+Gelato
+Cakes
+Macarons
+Cookies
+Milkshakes
+...//Ice Cream//
+
+[[I Don&#x27;t Know What I Want So I Shall Think About It]]
+</tw-passagedata><tw-passagedata pid="9" name="And You Decided To Go With ______" tags="" position="295,212">&lt;&lt;if $dial1 == &quot;cold&quot; &amp;&amp; $dial2 == &quot;fruity&quot;&gt;&gt;
+	Minty Passionfruit Kulfi
+&lt;&lt;elseif $dial1 == &quot;cold&quot; &amp;&amp; $dial2 == &quot;nutty&quot;&gt;&gt;
+	Hazelnut Gelato. You can never go wrong with Hazelnut!
+&lt;&lt;elseif $dial1 == &quot;cold&quot; &amp;&amp; $dial2 == &quot;mushy&quot;&gt;&gt;
+	A Tiramisu, for you
+&lt;&lt;elseif $dial1 == &quot;cold&quot; &amp;&amp; $dial2 == &quot;chocolatey&quot;&gt;&gt;
+	Chocolate Mousse??...I guess some people like being basic..idk
+&lt;&lt;elseif $dial1 == &quot;cold&quot; &amp;&amp; $dial2 == &quot;sweet and salty&quot;&gt;&gt;
+	Honey drizzled Goat Cheese Gelato, it actually //DOES// taste good
+
+&lt;&lt;elseif $dial1 == &quot;moist&quot; &amp;&amp; $dial2 == &quot;fruity&quot;&gt;&gt;
+	Pineapple Pastry is soooo underrated, good choice!
+&lt;&lt;elseif $dial1 == &quot;moist&quot; &amp;&amp; $dial2 == &quot;nutty&quot;&gt;&gt;
+	Dark Chocolate Walnut Cookie, possibly the healthiest thing on the     	menu!
+&lt;&lt;elseif $dial1 == &quot;moist&quot; &amp;&amp; $dial2 == &quot;mushy&quot;&gt;&gt;
+	Tres Leches, it changed my life for the better
+&lt;&lt;elseif $dial1 == &quot;moist&quot; &amp;&amp; $dial2 == &quot;chocolatey&quot;&gt;&gt;
+	No frowny when you have a chocolate fudge brownieeeee &lt;3
+&lt;&lt;elseif $dial1 == &quot;moist&quot; &amp;&amp; $dial2 == &quot;sweet and salty&quot;&gt;&gt;
+	Cannot ever go wrong with Salted Crème Caramel 
+
+&lt;&lt;elseif $dial1 == &quot;soft&quot; &amp;&amp; $dial2 == &quot;fruity&quot;&gt;&gt;
+	Date and Fig filled cookies, traditional and tasty af
+&lt;&lt;elseif $dial1 == &quot;soft&quot; &amp;&amp; $dial2 == &quot;nutty&quot;&gt;&gt;
+	Pistachio Doughnut, I saw you eyeing that
+&lt;&lt;elseif $dial1 == &quot;soft&quot; &amp;&amp; $dial2 == &quot;mushy&quot;&gt;&gt;
+	Mmmmmmm Matcha Mochi
+&lt;&lt;elseif $dial1 == &quot;soft&quot; &amp;&amp; $dial2 == &quot;chocolatey&quot;&gt;&gt;
+	Chocolate Éclairs, you might wanna grab a few more  
+&lt;&lt;elseif $dial1 == &quot;soft&quot; &amp;&amp; $dial2 == &quot;sweet and salty&quot;&gt;&gt;
+	Puffy Bombolone filled with Ricotta topped with powdered sugar, 	basically a fancy doughnut
+
+&lt;&lt;elseif $dial1 == &quot;crunchy&quot; &amp;&amp; $dial2 == &quot;fruity&quot;&gt;&gt;
+	That Basil Lemon Tarte is glowinggg!!! 
+&lt;&lt;elseif $dial1 == &quot;crunchy&quot; &amp;&amp; $dial2 == &quot;nutty&quot;&gt;&gt;
+	MacarONsss of AlmONdssss
+&lt;&lt;elseif $dial1 == &quot;crunchy&quot; &amp;&amp; $dial2 == &quot;mushy&quot;&gt;&gt;
+	Crème Brûlée, classyyy
+&lt;&lt;elseif $dial1 == &quot;crunchy&quot; &amp;&amp; $dial2 == &quot;chocolatey&quot;&gt;&gt;
+	Cannoli filled with Chocolate Creme, get like two more
+&lt;&lt;elseif $dial1 == &quot;crunchy&quot; &amp;&amp; $dial2 == &quot;sweet and salty&quot;&gt;&gt;
+	Pretzel and Marshmellow Cookie?? Damn
+&lt;&lt;/if&gt;&gt;
+
+[[Leave the Sweet Shop because the weather is nice-&gt;Chosen]]
+</tw-passagedata><tw-passagedata pid="10" name="I Don&#x27;t Know What I Want So I Shall Think About It" tags="" position="289,98">@@font-size:20px;//Click on the link to change the options//@@
+
+I want something that is &lt;&lt;cyclinglink &quot;$dial1&quot; &quot;moist&quot; &quot;cold&quot; &quot;soft&quot; &quot;crunchy&quot;&gt;&gt;. 
+
+And something that is &lt;&lt;cyclinglink &quot;$dial2&quot; &quot;fruity&quot; &quot;chocolatey&quot; &quot;sweet and salty&quot; &quot;nutty&quot; &quot;mushy&quot;&gt;&gt;
+
+[[And You Decided To Go With ______]]
+</tw-passagedata><tw-passagedata pid="11" name="Proceed" tags="" position="303,447">On your way out the door, someone accidently pushed you...in horror you look down...Your treat fell on the floor... 
+
+That asshole apologized, and offered to buy you another treat. You want some ice cream
+
+[[You Really Wanna Die Don&#x27;t You-&gt;OMG]]
+</tw-passagedata><tw-passagedata pid="12" name="demo end" tags="" position="544,98">Thank you for playing the demo!!
+
+I know that was a VERY short demo, but before I make other adjustments I need your feedback!
+
+Please DM on Instagram with your feedback!! Thank you so much for your support!!
+
+I may or may not have another demo later on hehe
+
+[[Intro]]
+
+
+</tw-passagedata><tw-passagedata pid="13" name="StoryInit" tags="" position="29,0">&lt;&lt;cacheaudio &quot;Icecreamtruck&quot; &quot;http://saniyaga.github.io/TwineGames/IceCreamTruckHorror.wav&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="14" name="trap" tags="" position="424,100">
+@@font-size:100px;//....It&#x27;s the Ice Cream Truck....//@@
+
+&lt;&lt;timed 2s&gt;&gt;&lt;&lt;goto &quot;demo end&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata></tw-storydata>
